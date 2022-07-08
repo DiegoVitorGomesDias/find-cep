@@ -17,7 +17,7 @@ function App() {
     console.log(ceptxt);
 
     //se digitou o cep corretamente, fazer a busca
-    if((ceptxt.length == 8) || (ceptxt.length == 9))
+    if((ceptxt.length === 8) || (ceptxt.length === 9))
     {
       try
       {
@@ -50,7 +50,7 @@ function App() {
           autoFocus
           onChange={(e) => Setceptxt(e.target.value)}
           onDragEnter={(e) => console.log(e)}
-          onKeyDownCapture={(e) => {if (e.code == "Enter" || e.code == "NumpadEnter"){return handlecep()}}}
+          onKeyDownCapture={(e) => {if (e.code === "Enter" || e.code === "NumpadEnter"){return handlecep()}}}
           /* onKeyDownCapture={(e) => console.log(e.code)} */
           />
 
