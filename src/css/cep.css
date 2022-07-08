@@ -34,7 +34,7 @@ header
     border: 1px solid white;    
     color: white;
     padding: 10px;
-    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-size: clamp(1rem, 3vw, 1.5rem);   
 }
 
 #btn-search
