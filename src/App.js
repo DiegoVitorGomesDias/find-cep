@@ -5,9 +5,6 @@ import api from "./services/api"
 
 function App() {
 
-  //@Felipe, consegui fazer o que queria, ficou desse jeito.
-  //obs. usei objeto alternarios no html com jsx
-
   const [ceptxt, Setceptxt] = useState("");
   const [reqcep, Setreqcep] = useState({});
 
