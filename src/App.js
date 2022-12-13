@@ -8,19 +8,14 @@ function App() {
   const [ceptxt, Setceptxt] = useState("");
   const [reqcep, Setreqcep] = useState({});
 
-  //função assíncrona para buscar o cep via json
   const handlecep = async () =>
   {
-    console.log(ceptxt);
-
-    //se digitou o cep corretamente, fazer a busca
     if((ceptxt.length === 8) || (ceptxt.length === 9))
     {
       try
       {
         const response = await api.get(`${ceptxt}/json/`);
         Setreqcep(response.data);
-        console.log(response.data);                 
       }
       catch(error)
       {
@@ -29,7 +24,6 @@ function App() {
         Setceptxt("");
       }
     }
-
   }
 
   return (
@@ -47,8 +41,7 @@ function App() {
           autoFocus
           onChange={(e) => Setceptxt(e.target.value)}
           onDragEnter={(e) => console.log(e)}
-          onKeyDownCapture={(e) => {if (e.code === "Enter" || e.code === "NumpadEnter"){return handlecep()}}}
-          /* onKeyDownCapture={(e) => console.log(e.code)} */
+          onKeyDownCapture={(e) => {if (e.code.includes("Enter", "NumpadEnter")) return handlecep()}}
           />
 
           <button type="submit" id="btn-search" onClickCapture={handlecep}>
