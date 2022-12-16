@@ -19,9 +19,7 @@ function App() {
       }
       catch(error)
       {
-        console.log(error);
         Setreqcep({});
-        Setceptxt("");
       }
     }
   }
@@ -40,8 +38,7 @@ function App() {
           value={ceptxt} 
           autoFocus
           onChange={(e) => Setceptxt(e.target.value)}
-          onDragEnter={(e) => console.log(e)}
-          onKeyDownCapture={(e) => {if (e.code.includes("Enter", "NumpadEnter")) return handlecep()}}
+          onKeyDownCapture={(e) => {if (["Enter", "NumpadEnter"].includes(e.code)) return handlecep()}}
           />
 
           <button type="submit" id="btn-search" onClickCapture={handlecep}>
