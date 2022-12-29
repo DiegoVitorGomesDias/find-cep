@@ -1,70 +1,121 @@
 .content
 {
-    width: 100vw;
-    height: 100vh;
-    text-align: center;    
-    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 5vh;
+    min-height: 100vh;
+    text-align: center;    
+    color: white;
     background-image: linear-gradient(-180deg, #f1f1f1 -50%, #010101 10%, #f1f1f1 1000%);
 }
 
 header
 {
-    font-size: clamp(1em, 5vw, 3em);
-}
-
-#searchCEP
-{
-    height: 5vh;
     display: flex;
-    justify-content: center;
-    align-items: stretch;    
-    margin: 15px auto;    
+    flex: 0 0 auto;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5vh 5vw;
+    width: -webkit-fill-available;
+    border-bottom: 1px solid white;
 }
 
-#txtcep
+header img { max-width: 5vw; max-height: 5vh; }
+header a:not( a:has(img) ) 
 {
-    width: 95%;
-    border-radius: 5px 0px 0px 5px;
-    background-color: transparent;
+    color: chartreuse;
+    font-weight: bold;
+    padding: 1vh 1vw;
+    outline: 1px solid chartreuse;
+    border-radius: 10px;
+    transition: all .1s ease-out;
+}
+header a:hover { filter: drop-shadow(0px 0px 10px #7fff00f0);  }
+header a:focus { text-decoration: underline; }
+
+main
+{
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+main form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+    width: 100%;
+}
+
+main form div
+{
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    justify-content: flex-start;    
+    align-items: center;
+    gap: .5vh;
+}
+
+main form div input
+{
+    width: 150%;
+    padding: 1vh 1vw;
+    background: none;
+    border: none;
     outline: none;
-    border: 1px solid white;    
+    border-bottom: 1px solid chartreuse;
+    font-size: clamp(1rem, 0.9336rem + 0.354vw, 1.5rem);
     color: white;
-    padding: 10px;
-    font-size: clamp(1rem, 3vw, 1.5rem);   
+    text-align: center;
 }
 
-#btn-search
+
+main form div small
 {
-    width: 15%;    
-    font-size: .6em;
-    padding: 5.7px 0px 1px 0px;
-    border-radius: 0px 5px 5px 0px;
-    background-color: transparent;
-    outline: none;
-    border: 1px solid white;
-    border-left: 0px;
+    padding: 1vh 1vw;
+    text-align: center;
+    width: 50%;
+    color: red;
+}
+
+main form button
+{
+    width: 50%;
+    padding: 1vh 1vw;
+    background: none;
+    border: none;
+    color: chartreuse;
+    font-size: clamp(2rem, 0.9336rem + 0.354vw, 1.5rem);
+    text-align: center;
     cursor: pointer;
-    color: white;    
+    transition: all .1s ease-in-out;
 }
 
-#btn-search:focus
-{
-    background-color: white;
-    color: black;
-}
+main form button:hover { transform: scale(1.1); }
+main form button:focus { text-decoration: underline;}
 
 aside
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+aside div
 {
     display: flex;
     flex-direction: column;
     gap: 12px;
     background: #c2c2c20f;
     width: 85vw;
-    padding: calc(12 * 4px) 0px;
+    padding: 3vh;
     max-width: 805px;
     border-radius: 5px;
 }
