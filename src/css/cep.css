@@ -23,7 +23,7 @@ header
     border-bottom: 1px solid white;
 }
 
-header img { max-width: 5vw; max-height: 5vh; }
+header img { width: 3em; max-width: 50px; }
 header a:not( a:has(img) ) 
 {
     color: chartreuse;

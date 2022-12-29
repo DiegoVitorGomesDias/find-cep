@@ -11,9 +11,9 @@ function App() {
 
   const validationSchemaSearch = yup.object().shape
   ({
-    uf: yup.string().required("Required").length(2, "Use a sigla do Estado").lowercase(),
-    city: yup.string().required("Required").min(2, "Digite o nome completo da cidade").lowercase(),
-    publicPlace: yup.string().required("Required").min(2, "Digite o nome completo da rua").lowercase()
+    uf: yup.string().required("Required.").length(2, "Use a sigla do Estado").lowercase(),
+    city: yup.string().required("Required.").min(2, "Digite o nome completo da cidade").lowercase(),
+    publicPlace: yup.string().required("Required.").min(2, "Digite o nome completo da rua").lowercase()
   })
 
   const { values, errors, touched, handleChange, handleBlur, handleSubmit, isValid, isSubmitting  } = useFormik
